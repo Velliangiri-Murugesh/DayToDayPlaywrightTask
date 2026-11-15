@@ -17,8 +17,6 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps chromium
-    - name: Run Playwright tests
-      run: npx playwright test
     - name: Create saved login session
       run: npx playwright test day17-auth-setup --project=chromium
     - name: Run Playwright tests

@@ -3,7 +3,7 @@ import { LoginPage } from '../pages/LoginPage';
 import path from 'path';
 
 const dir=path.join(__dirname,'../.auth/user.json')
-test('storageStateTest',{tag:'@Store'},async({page})=>{
+test('storageStateTest',{tag:'@negative'},async({page})=>{
 
     const loginPage=new LoginPage(page);
     await loginPage.goto();
