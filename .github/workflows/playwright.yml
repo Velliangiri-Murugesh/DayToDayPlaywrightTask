@@ -21,13 +21,14 @@ jobs:
       run: npx playwright test day17-auth-setup --project=chromium
     - name: Run Playwright tests
       run: npx playwright test --project=chromium --grep-invert "@negative|@visual|@needs-session"
-    - name: Run session test
-      run: npx playwright test day17-auth-reuse --project=chromium
-    - name: Run smoke test
+    - name: Create saved login session
+      run: npx playwright test day17-auth-setup --project=chromium
+    - name: Smoke tests
       run: npx playwright test --project=chromium --grep "@smoke"
     - name: Regression tests
-      if: success()
       run: npx playwright test --project=chromium --grep "@regression|@ui"
+    - name: Run session test
+      run: npx playwright test day17-auth-reuse --project=chromium
     - uses: actions/upload-artifact@v4.6.2
       with:
         name: playwright-report
