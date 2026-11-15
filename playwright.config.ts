@@ -35,7 +35,7 @@ export default defineConfig({
     trace: 'retain-on-failure',
     screenshot:'only-on-failure',
     navigationTimeout:60000,
-    headless:true,
+    headless:!!process.env.CI,
     // baseURL:process.env.BASE_URL ?? 'https://the-internet.herokuapp.com/',
 
   },
