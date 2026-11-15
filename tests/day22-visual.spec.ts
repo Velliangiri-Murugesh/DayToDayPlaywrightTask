@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 
-test('visualTest', async ({ page }) => {
+test('visualTest',{tag:'@visual'}, async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
     await page.getByLabel('Username').fill('tomsmith');

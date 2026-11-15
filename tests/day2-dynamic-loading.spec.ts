@@ -18,7 +18,7 @@ test('hiddenBeforeStart',async({page})=>{
 });
 
 
-test('negativeControl_notAttached',async({page})=>{
+test('negativeControl_notAttached',{tag:'@negative'},async({page})=>{
 
     await page.goto('https://the-internet.herokuapp.com/dynamic_loading/2');
     await expect(page.locator('#finish')).toBeAttached();
