@@ -7,3 +7,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/tests/day34-flaky.spec/
