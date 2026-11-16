@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test'
-import {loginAs} from '../utils/helpers'
+import {loginAs} from '../../utils/helpers'
 
 
 test('validLogin',async({page})=>{

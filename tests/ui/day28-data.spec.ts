@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
-import { LoginPage } from '../pages/LoginPage';
+import { LoginPage } from '../../pages/LoginPage';
 
 type User = {
   name: string;
@@ -11,7 +11,7 @@ type User = {
   expectedMessage: string;
 };
 
-const users:User[]=JSON.parse(fs.readFileSync(path.join(__dirname,'../test_data/user.json'), 'utf-8'));
+const users:User[]=JSON.parse(fs.readFileSync(path.join(__dirname,'../../test_data/user.json'), 'utf-8'));
 
 for (const user of users){
 

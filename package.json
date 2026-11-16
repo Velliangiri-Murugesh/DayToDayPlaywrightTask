@@ -4,10 +4,24 @@
   "description": "",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "report:allure": "node scripts/write-allure-env.js && allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "test:smoke": "playwright test --project=chromium --grep @smoke",
+    "test:regression": "playwright test --project=chromium --grep \"@regression|@ui\"",
+    "test:api": "playwright test tests/api --project=chromium",
+    "test:visual": "playwright test tests/visual --project=chromium",
+    "test:a11y": "playwright test tests/a11y --project=chromium",
+    "test:negative": "playwright test --project=chromium --grep @negative",
+    "test:all": "playwright test --project=chromium --grep-invert \"@negative|@needs-session\"",
+    "report:allure": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+    
+  },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
     "@playwright/test": "^1.65.0",
-    "@types/node": "^26.6.6"
+    "@types/node": "^26.6.6",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.14.0",
+    "dotenv": "^18.0.10"
   }
 }

@@ -1,4 +1,4 @@
-import { test, expect } from '../fixtures/loginFixtures';
+import { test, expect } from '../../fixtures/loginFixtures';
 
 test('loginPage',{tag:'@smoke'},async({loginPage,page})=>{
 

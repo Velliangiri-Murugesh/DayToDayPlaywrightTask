@@ -14,7 +14,7 @@ import fs from 'fs'
 //         await page.getByRole('link',{name:'1102__________.png'}).click(),
 //     ]);
 
-//     const downloadPath=path.join(__dirname,'../downloads',downloadPromise.suggestedFilename());
+//     const downloadPath=path.join(__dirname,'../../downloads',downloadPromise.suggestedFilename());
 //    await downloadPromise.saveAs(downloadPath);
 
 
@@ -33,7 +33,7 @@ test('filedownloadValidation',async({page,request})=>{
     const suggestedName = download.suggestedFilename();
     expect(suggestedName).toBe('1102__________.png');
 
-    const downloadPath = path.join(__dirname, '../downloads', suggestedName);
+    const downloadPath = path.join(__dirname, '../../downloads', suggestedName);
     await download.saveAs(downloadPath);
     expect(fs.statSync(downloadPath).size).toBeGreaterThan(0);
 try{

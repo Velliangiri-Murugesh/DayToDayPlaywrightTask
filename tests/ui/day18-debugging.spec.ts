@@ -1,5 +1,5 @@
-import {test,expect} from '../fixtures/loginFixtures'
-import { LoginPage  } from '../pages/LoginPage'
+import {test,expect} from '../../fixtures/loginFixtures'
+import { LoginPage  } from '../../pages/LoginPage'
 
 test('TraceTest',{tag:'@negative'},async({loginPage,page})=>{
 

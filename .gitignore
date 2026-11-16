@@ -7,7 +7,9 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-/tests/day34-flaky.spec/
+allure-results/
+allure-report/
+tests/experiments/
 
 # Secrets and session data
 .env
