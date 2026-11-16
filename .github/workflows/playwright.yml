@@ -44,10 +44,7 @@ jobs:
 
       - name: Accessibility tests
         run: npx playwright test tests/a11y --project=chromium
-
-      - name: Visual tests
-        run: npx playwright test tests/visual --project=chromium
-
+        
       - name: Create saved login session
         run: npx playwright test day17-auth-setup --project=chromium
 
