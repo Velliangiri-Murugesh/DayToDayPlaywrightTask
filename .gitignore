@@ -8,3 +8,7 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 /tests/day34-flaky.spec/
+
+# Secrets and session data
+.env
+.auth/
